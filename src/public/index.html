@@ -1,0 +1,20 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cole's Orchestral Control Kit</title>
+</head>
+<body>
+    <h1>Queue</h1>
+    <form action="/add-to-queue" method="post">
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" id="urlInput" name="url" required>
+        <button type="submit">Add to Queue</button>
+    </form>
+    <form action="/play" method="get">
+        <button type="submit">Play Music</button>
+    </form>
+</body>
+</html>
