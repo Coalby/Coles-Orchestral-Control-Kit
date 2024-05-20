@@ -2,7 +2,7 @@ const express = require('express');
 const body_parser = require('body-parser');
 const path = require('path');
 const ytdl = require('ytdl-core');
-const speaker = require('speaker');
+const Speaker = require('speaker');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,7 +29,7 @@ app.get('/play', async (req, res) => {
 
     try {
         const stream = ytdl(video_id, { filter: 'audioonly' });
-        stream.pipe(new speaker());
+        stream.pipe(new Speaker());
         res.status(200).send('Playing audio');
     } catch(error) {
         console.error('Error:', error);
